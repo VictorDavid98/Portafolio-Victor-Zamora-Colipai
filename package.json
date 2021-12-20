@@ -1,7 +1,7 @@
 {
-  "name": "Portafolio-Web",
+  "name": "webpack-inicial",
   "version": "1.0.0",
-  "description": "Este es la primera version de mi portafolio web",
+  "description": "Este es un cascaron de un proyecto de webpack",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
