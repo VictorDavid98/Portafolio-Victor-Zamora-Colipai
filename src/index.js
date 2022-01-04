@@ -1,11 +1,9 @@
 
-import { saludar } from "./js/componentes";
 import './styles.css';
 
 const typed = new Typed('.typed', {
-    strings: ['<i class="cargos">DESARROLLADOR WEB</i>',
-              '<i class="cargos">DISEÑADOR WEB</i>',
-              '<i class="cargos">MAQUETADOR WEB</i>'],
+    strings: ['<i class="cargos">Desarrollador Web </i>',
+              '<i class="cargos">Diseñador Web </i>'],
               stringsElement: '#cadenas-texto', // ID del elemento que contiene cadenas de texto a mostrar.
               typeSpeed: 50, // Velocidad en mlisegundos para poner una letra,
               startDelay: 300, // Tiempo de retraso en iniciar la animacion. Aplica tambien cuando termina y vuelve a iniciar,
@@ -32,20 +30,13 @@ btnMenu.addEventListener('click', () => {
     menu.classList.toggle('show');
 
 });
-// jQuery('document').ready(function($){
-//     const menuBtn = $('.menu-icon'),
-//           menu = $('.nav-bn ul');
 
-//     menuBtn.click(function() {
-//         menu.addClass('show');
-//     })
 
-// });
+//boton de Volver Arriba
 const caja = document.querySelector('.volverArriba');
 caja.addEventListener('click', () => {
     document.documentElement.scrollTop = 0;
 });
-
 window.addEventListener('scroll', () => {
     if(document.documentElement.scrollTop > 0){
         caja.style.display = 'flex';
@@ -54,4 +45,34 @@ window.addEventListener('scroll', () => {
         caja.style.display = 'none';
     }
 });
+
+
+//Enviar Correo
+const $form = document.querySelector('#form');
+const $buttonMailto = document.querySelector('#enviarCorreo');
+$form.addEventListener('submit', handleSubmit)
+function handleSubmit(event){
+    event.preventDefault();
+    const form = new FormData(this);
+    $buttonMailto.setAttribute('href', `mailto:victorzamorac98@gmail.com?subjec=${form.get('nombreCompleto')}${form.get('correo')}&body=${form.get('mensaje')}`);
+    $buttonMailto.click();
+  
+}
+
+//boton
+$(document).ready(function(e){
+    $('.btn').on('mouseenter', function(e){
+        x = e.pageX - $(this).offset().left;
+        y = e.pageY - $(this).offset().top;
+        $(this).find('span').css({top:y, left:x})
+    })
+    $('.btn').on('mouseenter', function(e){
+        x = e.pageX - $(this).offset().left;
+        y = e.pageY - $(this).offset().top;
+        $(this).find('span').css({top:y, left:x})
+    })
+})
+
+
+
 

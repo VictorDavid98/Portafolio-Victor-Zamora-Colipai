@@ -258,11 +258,11 @@ header{
         height: 100vh;
         padding-top: 5rem;
         background: rgb(45,251,238);
-        background: repeating-linear-gradient(-40deg, rgba(45,251,238,1) 20%, rgba(55,113,233,1) 80%);
+        background: repeating-linear-gradient(-27deg, rgba(45,251,238,1) 20%, rgb(4, 45, 128) 80%);
         margin-bottom: 2rem;
         
         body.dark &{
-            background: repeating-linear-gradient(-40deg, rgb(0, 0, 0) 20%, rgb(60, 60, 61) 80%);
+            background: repeating-linear-gradient(-27deg, rgb(0, 0, 0) 18%, rgb(60, 60, 61) 80%);
            
             
         }
@@ -270,18 +270,19 @@ header{
             display: flex;
             justify-content: center;
             align-items: center;
+            padding-top: 10px;
             img{
                 // padding-top: 15px;
-                max-width: 25%;
-                max-height: 25%;
-                border-radius: 10px;
+                max-width: 50%;
+                max-height: 50%;
+                border-radius: 0px;
                 
             }
             @media (min-width: 768px)
             {
                 img{
-                    max-width: 15%;
-                    max-height: 15%;
+                    max-width: 25%;
+                    max-height: 25%;
                 }   
             }
         }
@@ -309,19 +310,34 @@ header{
                     font-size: 50px;
                 }   
             }
-            a{ 
-                background-color: $grisClaro;
-                color: $negro;
-                margin-top: .5rem;
-                padding: .5rem 3rem;
-                border-radius: 5px;
-                font-weight: 700;
+            .btn{
+                position: relative;
+                padding: 10px 30px;
+                border: 2px solid #1f0ad8;
+                margin: 10px;
+                display: inline-block;
                 text-decoration: none;
+                color: #1f0ad8;
+                letter-spacing: 2px;
                 text-transform: uppercase;
-                font-size: 1.2rem;
-                border:none;
-                
+                transition: 0.5s;
             }
+            .btn:hover{
+                color: #111;
+            }
+            // a{ 
+            //     background-color: $grisClaro;
+            //     color: $negro;
+            //     margin-top: .5rem;
+            //     padding: .5rem 3rem;
+            //     border-radius: 5px;
+            //     font-weight: 700;
+            //     text-decoration: none;
+            //     text-transform: uppercase;
+            //     font-size: 1.2rem;
+            //     border:none;
+                
+            // }
         }
     }
 }
@@ -702,6 +718,9 @@ header{
 }
 html{
     scroll-behavior: smooth;
+}
+#enviarCorreo{
+    opacity: 0;
 }
 
 

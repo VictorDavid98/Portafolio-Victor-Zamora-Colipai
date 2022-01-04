@@ -306,12 +306,12 @@ header .hero {
   height: 100vh;
   padding-top: 5rem;
   background: #2dfbee;
-  background: repeating-linear-gradient(-40deg, #2dfbee 20%, #3771e9 80%);
+  background: repeating-linear-gradient(-27deg, #2dfbee 20%, #042d80 80%);
   margin-bottom: 2rem;
 }
 
 body.dark header .hero {
-  background: repeating-linear-gradient(-40deg, black 20%, #3c3c3d 80%);
+  background: repeating-linear-gradient(-27deg, black 18%, #3c3c3d 80%);
 }
 
 header .hero .imagen_header {
@@ -324,18 +324,19 @@ header .hero .imagen_header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 10px;
 }
 
 header .hero .imagen_header img {
-  max-width: 25%;
-  max-height: 25%;
-  border-radius: 10px;
+  max-width: 50%;
+  max-height: 50%;
+  border-radius: 0px;
 }
 
 @media (min-width: 768px) {
   header .hero .imagen_header img {
-    max-width: 15%;
-    max-height: 15%;
+    max-width: 25%;
+    max-height: 25%;
   }
 }
 
@@ -368,17 +369,22 @@ header .hero .contenido-hero .cargos {
   }
 }
 
-header .hero .contenido-hero a {
-  background-color: #C8C8C8;
-  color: #111111;
-  margin-top: .5rem;
-  padding: .5rem 3rem;
-  border-radius: 5px;
-  font-weight: 700;
+header .hero .contenido-hero .btn {
+  position: relative;
+  padding: 10px 30px;
+  border: 2px solid #1f0ad8;
+  margin: 10px;
+  display: inline-block;
   text-decoration: none;
+  color: #1f0ad8;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  font-size: 1.2rem;
-  border: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header .hero .contenido-hero .btn:hover {
+  color: #111;
 }
 
 .contenedor-sobremi {
@@ -823,5 +829,9 @@ body.dark .contacto .contacto-form button, body.dark .contacto .contacto-form in
 
 html {
   scroll-behavior: smooth;
+}
+
+#enviarCorreo {
+  opacity: 0;
 }
 /*# sourceMappingURL=styles.css.map */

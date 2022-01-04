@@ -44,12 +44,12 @@
                 
             <div class="hero">
                 <div class="imagen_header">
-                    <img src="./assets/img/Fotoheader.jpg" alt="">
+                    <img src="./assets/img/header-8.svg" alt="">
                 </div>
                 <div class="contenido-hero">
                     <h2>¡Hola! soy Víctor Zamora </h2>  
                     <h2><span class="typed"></span></h2>
-                    <a class="boton" href="#"> <i class="far fa-address-card"></i> Curriculum</a>
+                    <a class="btn" href="#portafolio"> <i class="far fa-address-card"></i><span></span> Portafolio</a>
                 </div>
             </div>
         </div>
@@ -166,15 +166,13 @@
         </div>
     </div>
     
-    <div class="imagen-fondo" style="background-image: url(./assets/img/mis-hobbies.jpg);">
-        <a class="boton" href="#"> <i class="far fa-address-card"></i> Mis Hobbies</a>
-    </div>
+    <!----------------------Seccion Contacto------------------>
 
     <div class="contacto" id="contactame">
         <h1>Contactame</h1>
         <div class="contacto-1">
             <div class="contacto-form">
-                <form action="">
+                <form action="" id="form" class="form">
                     <p >
                         <label for="nombreCompleto">Nombre Completo</label>
                         <input type="text" name="nombreCompleto" id="nombreCompleto">
@@ -192,9 +190,10 @@
                         <textarea name="mensaje" id="mensaje" cols="30" rows="4"></textarea>
                     </p> 
                     <p class="block">
-                        <button type="submit">Enviar</button>
+                        <button type="submit" class="btn-enviar">Enviar</button>
                     </p> 
                 </form>
+                <a href="mailto:victorzamorac98@gmail.com" id="enviarCorreo"></a>
             </div>
         </div>
     </div>
@@ -221,6 +220,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 
 </html>
