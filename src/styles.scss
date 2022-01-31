@@ -84,7 +84,7 @@ header{
         height: 100vh;
         
         .nav-bg{      
-            position: absolute;  
+            position: absolute; 
             top: 0;
             left: 0;
             right: 0;    
@@ -95,7 +95,7 @@ header{
 	        transition: .3s ease all;
 	        box-shadow: $sombraDark;
             align-items: center;
-            background-color:$blanco;
+            background: transparentize($color: #ffffff, $amount: 0);
 
             .nombre-inicio{
                 width: 250px;
@@ -260,7 +260,10 @@ header{
         background: rgb(45,251,238);
         background: repeating-linear-gradient(-29deg, rgba(45,251,238,1) 18%, rgb(4, 45, 128) 80%);
         margin-bottom: 2rem;
-        
+        @media (max-width: 768px)
+        {
+            padding-top: 10rem;
+        }
         body.dark &{
             background: repeating-linear-gradient(-29deg, rgb(0, 0, 0) 18%, rgb(60, 60, 61) 80%);
            
@@ -273,8 +276,8 @@ header{
             padding-top: 10px;
             img{
                 // padding-top: 15px;
-                width: 60%;
-                height: 60%;
+                width: 70%;
+                height: 70%;
                 border-radius: 0px;
                 
             }
@@ -311,7 +314,7 @@ header{
                 }   
             }
             .btn{
-                position: relative;
+                position: static;
                 padding: 10px 30px;
                 border: 4px solid $blanco;
                 margin: 10px;
@@ -434,7 +437,9 @@ header{
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     padding-top: 15px;
-   
+    @media (max-width: 768px){
+        grid-template-columns: repeat(1, 1fr);
+    }
    
     body.dark &{
         background-color: rgb(56, 50, 50);
@@ -453,12 +458,13 @@ header{
 }
 .tres-columnas{
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     width: 100%;
     text-align: center;
     align-items: center;
     background: rgb(45,251,238);
-    padding-bottom: 20px;
+    padding-bottom: 0px;
     body.dark &{
         background-color: rgb(56, 50, 50);
         color: $negro;
@@ -476,11 +482,12 @@ header{
 .entrada-habilidades{
    
     width: 100%;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
     background-color:$blanco;
-    border-radius: 15%;
-    width: 300px;
-    height: 300px;
+    border-radius: 5%;
+    width: 100%;
+    height: 100%;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
    h1{
        padding: 0%;
@@ -495,9 +502,17 @@ header{
 }
 .servicios{
     background-color: #fff;
-    border-radius: 10%;
+    border-radius: 3%;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
     color: $negro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    h1{
+        font-size: 30px;
+        padding-bottom: 20px;
+    }
     body.dark &{
         box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.3);
         background-color: $grisOscuro;
@@ -515,7 +530,7 @@ header{
         text-align: center;
         padding-top: 100px;
         .btn{
-            position: relative;
+            position: static;
             padding: 10px 30px;
             border: 4px solid $blanco;
             margin: 10px;
@@ -529,10 +544,7 @@ header{
         .btn:hover{
             color: rgb(116, 107, 107);
         }
-            
-            
-
-         
+        
 }
 
 .proyectos{
@@ -543,6 +555,8 @@ header{
     padding-bottom: 30px;
     padding-top: 1px;
     
+    
+    
     body.dark &{
         background-color: $negro;
         color: $blanco;
@@ -552,6 +566,9 @@ header{
     }
     
 }
+.test-nav{
+    position: static;
+}
 .tres-columnas-pro{
     width: 100%;
     padding-top: 15px;
@@ -560,6 +577,8 @@ header{
     padding-bottom: 20px;
     row-gap: 2rem;
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
     
 
     body.dark &{
@@ -572,16 +591,17 @@ header{
         width: 95%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        row-gap: 5rem;
+        gap: 2rem;
         margin: 0 auto;
         text-align: center;
         align-items: center;
         
+        
     }
 }
 .entrada-proyectos{
-    width: 310px;
-    height: 280px;
+    width: 90%;
+    height: 90%;
     position: relative;
     margin: 0 auto;
     background-color: $blanco;
@@ -613,7 +633,7 @@ header{
        flex-direction: column;
        align-items: center;
        overflow: hidden;
-       transition: all 0.3s ease-in-out;
+       transition: all 0.3s;
 
         &:hover{
             width: 100;
@@ -646,6 +666,7 @@ header{
     margin-right: auto;
     padding: 1.5em;
     padding-top: 0;
+    padding-bottom: 50px;
     border-radius: 3px;
     h1{
         text-align: center;
@@ -668,10 +689,7 @@ header{
         background-color: $grisClaro;
         form{
             margin: 0;
-            padding: 0.5em;
-            
-            
-            
+            padding: 0.5em;   
             p{
                 padding-bottom: 10px;
             }
@@ -736,7 +754,7 @@ header{
 .contacto-info{
     background-color: $grisClaroHover;
     max-width: 100%;
-    height: 200px;
+    height: 160px;
     text-align: center;
     padding-top: 15px;
     ul{
@@ -749,9 +767,9 @@ header{
     
 }
 .volverArriba{
-    width: 60px;
-    height: 60px;
-    background-color: rgba(36, 240, 226, 0.5);
+    width: 65px;
+    height: 65px;
+    background-color: rgba(0, 204, 255, 0.9);
     border-radius: 50%;
     display: flex;
     justify-content: center;

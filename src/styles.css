@@ -109,7 +109,7 @@ header .inicio .nav-bg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #FEFEFE;
+  background: white;
 }
 
 header .inicio .nav-bg .nombre-inicio {
@@ -310,6 +310,12 @@ header .hero {
   margin-bottom: 2rem;
 }
 
+@media (max-width: 768px) {
+  header .hero {
+    padding-top: 10rem;
+  }
+}
+
 body.dark header .hero {
   background: repeating-linear-gradient(-29deg, black 18%, #3c3c3d 80%);
 }
@@ -328,8 +334,8 @@ header .hero .imagen_header {
 }
 
 header .hero .imagen_header img {
-  width: 60%;
-  height: 60%;
+  width: 70%;
+  height: 70%;
   border-radius: 0px;
 }
 
@@ -370,7 +376,7 @@ header .hero .contenido-hero .cargos {
 }
 
 header .hero .contenido-hero .btn {
-  position: relative;
+  position: static;
   padding: 10px 30px;
   border: 4px solid #FEFEFE;
   margin: 10px;
@@ -495,10 +501,17 @@ body.dark .contenedor-habilidades {
   padding-bottom: 50px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
+  
       grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   padding-top: 15px;
+}
+
+@media (max-width: 768px) {
+  .habilidades {
+    
+        grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 body.dark .habilidades {
@@ -520,6 +533,8 @@ body.dark .habilidades {
 .tres-columnas {
   display: -ms-grid;
   display: grid;
+  
+      grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   width: 100%;
   text-align: center;
@@ -527,7 +542,7 @@ body.dark .habilidades {
       -ms-flex-align: center;
           align-items: center;
   background: #2dfbee;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
 }
 
 body.dark .tres-columnas {
@@ -537,7 +552,7 @@ body.dark .tres-columnas {
 
 @media (min-width: 768px) {
   .tres-columnas {
-    -ms-grid-columns: (1fr)[2];
+    
         grid-template-columns: repeat(2, 1fr);
     text-align: center;
     -webkit-box-align: center;
@@ -548,11 +563,12 @@ body.dark .tres-columnas {
 
 .entrada-habilidades {
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
   background-color: #FEFEFE;
-  border-radius: 15%;
-  width: 300px;
-  height: 300px;
+  border-radius: 5%;
+  width: 100%;
+  height: 100%;
   -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
 }
@@ -571,10 +587,26 @@ body.dark .entrada-habilidades {
 
 .servicios {
   background-color: #fff;
-  border-radius: 10%;
+  border-radius: 3%;
   -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
   color: #111111;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.servicios h1 {
+  font-size: 30px;
+  padding-bottom: 20px;
 }
 
 body.dark .servicios {
@@ -596,7 +628,7 @@ body.dark .servicios {
 }
 
 .imagen-fondo .btn {
-  position: relative;
+  position: static;
   padding: 10px 30px;
   border: 4px solid #FEFEFE;
   margin: 10px;
@@ -631,6 +663,10 @@ body.dark .proyectos {
   padding-top: 20px;
 }
 
+.test-nav {
+  position: static;
+}
+
 .tres-columnas-pro {
   width: 100%;
   padding-top: 15px;
@@ -642,6 +678,8 @@ body.dark .proyectos {
   row-gap: 2rem;
   display: -ms-grid;
   display: grid;
+  
+      grid-template-columns: repeat(2, 1fr);
 }
 
 body.dark .tres-columnas-pro {
@@ -654,9 +692,9 @@ body.dark .tres-columnas-pro {
     width: 95%;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[3];
+    
         grid-template-columns: repeat(3, 1fr);
-    row-gap: 5rem;
+    gap: 2rem;
     margin: 0 auto;
     text-align: center;
     -webkit-box-align: center;
@@ -666,8 +704,8 @@ body.dark .tres-columnas-pro {
 }
 
 .entrada-proyectos {
-  width: 310px;
-  height: 280px;
+  width: 90%;
+  height: 90%;
   position: relative;
   margin: 0 auto;
   background-color: #FEFEFE;
@@ -713,8 +751,8 @@ body.dark .tres-columnas-pro {
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .entrada-proyectos .capa:hover {
@@ -748,6 +786,7 @@ body.dark .entrada-proyectos {
   margin-right: auto;
   padding: 1.5em;
   padding-top: 0;
+  padding-bottom: 50px;
   border-radius: 3px;
 }
 
@@ -852,7 +891,7 @@ body.dark .contacto .contacto-form button, body.dark .contacto .contacto-form in
 .contacto-info {
   background-color: #ACABAB;
   max-width: 100%;
-  height: 200px;
+  height: 160px;
   text-align: center;
   padding-top: 15px;
 }
@@ -867,9 +906,9 @@ body.dark .contacto .contacto-form button, body.dark .contacto .contacto-form in
 }
 
 .volverArriba {
-  width: 60px;
-  height: 60px;
-  background-color: rgba(36, 240, 226, 0.5);
+  width: 65px;
+  height: 65px;
+  background-color: rgba(0, 204, 255, 0.9);
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
