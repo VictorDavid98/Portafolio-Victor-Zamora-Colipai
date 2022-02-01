@@ -1,6 +1,7 @@
 
 import './styles.css';
 
+
 const typed = new Typed('.typed', {
     strings: ['<i class="cargos">Desarrollador Web </i>',
               '<i class="cargos">Diseñador Web </i>'],

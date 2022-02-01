@@ -303,10 +303,10 @@ header .inicio .nav-bg .switch span {
 
 header .hero {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding-top: 5rem;
   background: #2dfbee;
-  background: repeating-linear-gradient(-29deg, #2dfbee 18%, #042d80 80%);
+  background: repeating-linear-gradient(-32deg, #2dfbee 18%, #042d80 80%);
   margin-bottom: 2rem;
 }
 
@@ -317,7 +317,7 @@ header .hero {
 }
 
 body.dark header .hero {
-  background: repeating-linear-gradient(-29deg, black 18%, #3c3c3d 80%);
+  background: repeating-linear-gradient(-32deg, black 18%, #3c3c3d 80%);
 }
 
 header .hero .imagen_header {
@@ -533,7 +533,7 @@ body.dark .habilidades {
 .tres-columnas {
   display: -ms-grid;
   display: grid;
-  
+ 
       grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   width: 100%;
@@ -607,6 +607,10 @@ body.dark .entrada-habilidades {
 .servicios h1 {
   font-size: 30px;
   padding-bottom: 20px;
+}
+
+.servicios ul {
+  list-style: none;
 }
 
 body.dark .servicios {
@@ -705,7 +709,7 @@ body.dark .tres-columnas-pro {
 
 .entrada-proyectos {
   width: 90%;
-  height: 90%;
+  height: 85%;
   position: relative;
   margin: 0 auto;
   background-color: #FEFEFE;
@@ -891,7 +895,7 @@ body.dark .contacto .contacto-form button, body.dark .contacto .contacto-form in
 .contacto-info {
   background-color: #ACABAB;
   max-width: 100%;
-  height: 160px;
+  height: 195px;
   text-align: center;
   padding-top: 15px;
 }
