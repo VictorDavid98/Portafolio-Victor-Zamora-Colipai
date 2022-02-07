@@ -262,7 +262,7 @@ header{
         margin-bottom: 2rem;
         @media (max-width: 768px)
         {
-            padding-top: 10rem;
+            padding-top: 6rem;
         }
         body.dark &{
             background: repeating-linear-gradient(-32deg, rgb(0, 0, 0) 18%, rgb(60, 60, 61) 80%);
@@ -361,6 +361,7 @@ header{
 
     width: 90%;
     background-color: $blanco;
+    align-items: center;
     padding-top: 10px;
     border-radius: 15px;
     margin: 30px 0;
@@ -376,8 +377,8 @@ header{
         align-items: center;  
         img{
             width: 450px;
-            height: 450px;
-            padding-right: 50px;
+            height: auto;
+           
         } 
         h1{
             margin-right: 100px;
@@ -412,11 +413,9 @@ header{
         }
     }
     img{
-        max-width: 100%;
-        margin: 0 auto;
-        padding-top: 15px;
+        max-width: 300px;
+        margin: 0;
         border-radius: 10px;
-        margin-left: 18%;
     }
 }
 .contenedor-habilidades{

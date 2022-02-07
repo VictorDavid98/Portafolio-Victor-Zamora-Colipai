@@ -312,7 +312,7 @@ header .hero {
 
 @media (max-width: 768px) {
   header .hero {
-    padding-top: 10rem;
+    padding-top: 6rem;
   }
 }
 
@@ -416,6 +416,9 @@ body.dark .sobremi-w {
 .contenedor-sobremi {
   width: 90%;
   background-color: #FEFEFE;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 10px;
   border-radius: 15px;
   margin: 30px 0;
@@ -437,8 +440,7 @@ body.dark .sobremi-w {
   }
   .contenedor-sobremi img {
     width: 450px;
-    height: 450px;
-    padding-right: 50px;
+    height: auto;
   }
   .contenedor-sobremi h1 {
     margin-right: 100px;
@@ -477,11 +479,9 @@ body.dark .contenedor-sobremi p {
 }
 
 .contenedor-sobremi img {
-  max-width: 100%;
-  margin: 0 auto;
-  padding-top: 15px;
+  max-width: 300px;
+  margin: 0;
   border-radius: 10px;
-  margin-left: 18%;
 }
 
 .contenedor-habilidades {
@@ -501,7 +501,7 @@ body.dark .contenedor-habilidades {
   padding-bottom: 50px;
   display: -ms-grid;
   display: grid;
-  
+  -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   padding-top: 15px;
@@ -509,7 +509,7 @@ body.dark .contenedor-habilidades {
 
 @media (max-width: 768px) {
   .habilidades {
-    
+    -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
   }
 }
@@ -533,7 +533,7 @@ body.dark .habilidades {
 .tres-columnas {
   display: -ms-grid;
   display: grid;
- 
+  -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   width: 100%;
@@ -552,7 +552,7 @@ body.dark .tres-columnas {
 
 @media (min-width: 768px) {
   .tres-columnas {
-    
+    -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     text-align: center;
     -webkit-box-align: center;
@@ -682,7 +682,7 @@ body.dark .proyectos {
   row-gap: 2rem;
   display: -ms-grid;
   display: grid;
-  
+  -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
 }
 
@@ -696,7 +696,7 @@ body.dark .tres-columnas-pro {
     width: 95%;
     display: -ms-grid;
     display: grid;
-    
+    -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin: 0 auto;
