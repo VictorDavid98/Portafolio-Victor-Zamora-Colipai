@@ -426,6 +426,11 @@ body.dark .sobremi-w {
           box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
 }
 
+.contenedor-sobremi img {
+  width: 90%;
+  margin: 0;
+}
+
 @media (min-width: 768px) {
   .contenedor-sobremi {
     display: -ms-grid;
@@ -439,14 +444,7 @@ body.dark .sobremi-w {
             align-items: center;
   }
   .contenedor-sobremi img {
-    width: 450px;
-    height: auto;
-  }
-  .contenedor-sobremi h1 {
-    margin-right: 100px;
-  }
-  .contenedor-sobremi p {
-    margin-right: 100px;
+    width: 100%;
   }
 }
 
@@ -476,12 +474,6 @@ body.dark .contenedor-sobremi h1 {
 
 body.dark .contenedor-sobremi p {
   color: #FEFEFE;
-}
-
-.contenedor-sobremi img {
-  max-width: 300px;
-  margin: 0;
-  border-radius: 10px;
 }
 
 .contenedor-habilidades {
