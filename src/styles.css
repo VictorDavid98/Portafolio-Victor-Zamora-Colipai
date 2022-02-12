@@ -493,7 +493,7 @@ body.dark .contenedor-habilidades {
   padding-bottom: 50px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
+  
       grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   padding-top: 15px;
@@ -501,7 +501,7 @@ body.dark .contenedor-habilidades {
 
 @media (max-width: 768px) {
   .habilidades {
-    -ms-grid-columns: (1fr)[1];
+    
         grid-template-columns: repeat(1, 1fr);
   }
 }
@@ -525,7 +525,7 @@ body.dark .habilidades {
 .tres-columnas {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
+  
       grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   width: 100%;
@@ -544,7 +544,7 @@ body.dark .tres-columnas {
 
 @media (min-width: 768px) {
   .tres-columnas {
-    -ms-grid-columns: (1fr)[2];
+    
         grid-template-columns: repeat(2, 1fr);
     text-align: center;
     -webkit-box-align: center;
